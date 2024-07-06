@@ -34,7 +34,7 @@ fn main() {
                 .short('b')
                 .default_value("100")
                 .value_parser(value_parser!(u8))
-                .help("Speed of effects"),
+                .help("Brightness"),
         )
         .arg(
             Arg::new("speed")
@@ -48,7 +48,7 @@ fn main() {
                 .short('d')
                 .default_value("1")
                 .value_parser(value_parser!(u8))
-                .help("specifies the direction"),
+                .help("Specifies the direction"),
         )
         .arg(
             Arg::new("color")
@@ -56,7 +56,7 @@ fn main() {
                 .num_args(3)
                 .default_values(["255", "255", "255"])
                 .value_parser(value_parser!(u8))
-                .help("specifies the speed"),
+                .help("Specifies the color in format <R G B>"),
         );
 
     let matches = app.get_matches();
